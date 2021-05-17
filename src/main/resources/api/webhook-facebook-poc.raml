@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: facebook-webhook-poc
+mediaType: 
+  - application/json
+protocols:
+  - HTTPS
+traits:
+  client-id-required:
+    headers:
+      client_id:
+        type: string
+      client_secret:
+        type: string
+
+/callBack:
+  post:
+    description: insert the products information into the salesforce.
+    is: [client-id-required]
+    body:
+      application/json:
+    responses:
+      200:
+        body:
+          application/json:

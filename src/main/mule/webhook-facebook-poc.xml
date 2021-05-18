@@ -129,7 +129,7 @@ output application/json
             </on-error-propagate>
         </error-handler>
     </flow>
-    <flow name="post:\callBack:application\json:webhook-facebook-poc-config">
+    <flow name="post:\callBack\webhook:application\json:webhook-facebook-poc-config">
         <logger level="INFO" message="CallBack Start with payload #[payload]" />
 		<ee:transform doc:name="Transform Message" doc:id="b1f995e1-965e-4de9-be97-f6d7b78c46e6" >
 			<ee:message >

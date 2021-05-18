@@ -12,39 +12,36 @@ traits:
       client_secret:
         type: string
 
-/callBack:
-  /status:
-    get:
-      is: [client-id-required]
-      queryParameters:
-        hub.verify_token:
-          type: string
-          description: 
-          example: 
-          required: false
-        hub.challenge:
-          type: string
-          description: 
-          example: 
-          required: false
-        hub.mode:
-          type: string
-          description: 
-          example: 
-          required: false
-      responses:
-        200:
-          body:
-            application/json:
-              example: 
-    
-  /webhook:
-    post:
-      description: 
-      is: [client-id-required]
-      body:
-        application/json:
-      responses:
-        200:
-          body:
-            application/json:
+/webhook:
+  get:
+    is: [client-id-required]
+    queryParameters:
+      hub.verify_token:
+        type: string
+        description: 
+        example: 
+        required: false
+      hub.challenge:
+        type: string
+        description: 
+        example: 
+        required: false
+      hub.mode:
+        type: string
+        description: 
+        example: 
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            example: 
+  post:
+    description: 
+    is: [client-id-required]
+    body:
+      application/json:
+    responses:
+      200:
+        body:
+          application/json:
